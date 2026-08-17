@@ -25,8 +25,8 @@ VALID_DAYS = {
     "Sunday",
 }
 
-st.set_page_config(page_title="ML Pricing Core")
-st.title("ML Pricing Core")
+st.set_page_config(page_title="Pricing Demand Forecasting")
+st.title("Pricing Demand Forecasting")
 st.subheader("AI-powered pricing scenario assistant")
 st.caption(
     "Portfolio proof of concept using synthetic data. Results are simulated "

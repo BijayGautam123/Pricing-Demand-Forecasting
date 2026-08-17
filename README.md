@@ -1,6 +1,6 @@
-# ML Pricing Core
+# Pricing Demand Forecasting
 
-ML Pricing Core is a portfolio proof of concept for exploring pricing scenarios with synthetic data. A linear regression model estimates case demand from price, discount, holiday, weekday, and recent-demand inputs. The Streamlit app then calculates simulated revenue and profit and uses Gemini to explain the scenario in business terms.
+Pricing Demand Forecasting is a portfolio proof of concept for exploring pricing scenarios with synthetic data. A linear regression model estimates case demand from price, discount, holiday, weekday, and recent-demand inputs. The Streamlit app then calculates simulated revenue and profit and uses Gemini to explain the scenario in business terms.
 
 ## Project Structure
 
