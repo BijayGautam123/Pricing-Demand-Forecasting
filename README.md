@@ -1,6 +1,6 @@
 # ML Pricing Core
 
-ML Pricing Core is a Streamlit application for exploring pricing scenarios. A linear regression model estimates case demand from price, discount, holiday, weekday, and recent-demand inputs. The app then calculates revenue and profit and uses Gemini to explain the scenario in business terms.
+ML Pricing Core is a portfolio proof of concept for exploring pricing scenarios with synthetic data. A linear regression model estimates case demand from price, discount, holiday, weekday, and recent-demand inputs. The Streamlit app then calculates simulated revenue and profit and uses Gemini to explain the scenario in business terms.
 
 ## Project Structure
 
@@ -51,15 +51,16 @@ python -m streamlit run app.py
 
 ## Model Development
 
-The analysis notebook is located at `notebooks/pricing_model_analysis.ipynb`. It loads the repository dataset, engineers lag and rolling-demand features, performs a chronological train/test split, evaluates linear regression, and packages the model used by the app.
+The analysis notebook is located at `notebooks/pricing_model_analysis.ipynb`. It loads the synthetic dataset, engineers lag and rolling-demand features, and performs a chronological train/test split. Linear Regression, Random Forest, and XGBoost are compared using R-squared, MSE, and RMSE. The notebook also reviews Random Forest and XGBoost feature importance, retains standard and time-series cross-validation for Linear Regression, and checks multicollinearity with VIF.
 
 Saved notebook results include:
 
-- Test R-squared: 0.907
-- Test RMSE: 126.4 cases
-- Time-series cross-validation R-squared: 0.913
+- Linear Regression test R-squared: 0.907; RMSE: 126.4 cases
+- Random Forest test R-squared: 0.884; RMSE: 141.3 cases
+- XGBoost test R-squared: 0.863; RMSE: 153.2 cases
+- Linear Regression time-series cross-validation R-squared: 0.913
 
-The included dataset contains 517 daily pricing observations with price, discount, holiday, cases-sold, and weekday fields.
+Linear Regression is retained for the Streamlit application because it produced the strongest testing performance and a smaller training-to-testing performance gap than the tree-based alternatives. The included dataset contains 517 synthetic daily pricing observations with price, discount, holiday, cases-sold, and weekday fields.
 
 ## Current Scope
 
