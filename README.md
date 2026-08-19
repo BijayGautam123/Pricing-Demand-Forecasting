@@ -2,6 +2,10 @@
 
 Pricing Demand Forecasting is a portfolio proof of concept for exploring pricing scenarios with synthetic data. A linear regression model estimates case demand from price, discount, holiday, weekday, and recent-demand inputs. The Streamlit app then calculates simulated revenue and profit and uses Gemini to explain the scenario in business terms.
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pricing-demand-forecasting-g5s2phfhngkgwcd5anvq6m.streamlit.app/)
+
+**Live App:** [Open Pricing Demand Forecasting](https://pricing-demand-forecasting-g5s2phfhngkgwcd5anvq6m.streamlit.app/)
+
 ## Project Structure
 
 ```text
